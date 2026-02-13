@@ -22,6 +22,8 @@ func main() {
 		log.Fatal(err)
 	}
 
+	defer db.DB.Close()
+
 	webDir := "web"
 	http.Handle("/", http.FileServer(http.Dir(webDir)))
 

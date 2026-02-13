@@ -34,9 +34,12 @@ func Init(dbFile string) error {
 	install := os.IsNotExist(err)
 
 	DB, err = sql.Open("sqlite", dbFile)
+
 	if err != nil {
 		return ErrCannotInitDatabase
 	}
+
+	defer DB.Close()
 
 	if install {
 		_, err = DB.Exec(schema)

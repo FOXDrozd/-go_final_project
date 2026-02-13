@@ -20,11 +20,6 @@ var (
 
 	ErrRequiredField = errors.New("Отсутствует обязательное поле")
 
-	ErrTaskNotFound = errors.New("Задача не найдена")
-
-	ErrCannotGetLastID = errors.New("Невозможно получить ID последней вставленной записи")
-	ErrCannotReadRow   = errors.New("Невозможно прочитать строку из базы данных")
-
 	ErrPassword        = errors.New("Неверный пароль")
 	ErrInvalidToken    = errors.New("Неверный токен")
 	ErrTokenGeneration = errors.New("Ошибка генерации токена")
