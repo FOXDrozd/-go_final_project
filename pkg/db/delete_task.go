@@ -1,7 +1,6 @@
 package db
 
-func DeleteЕфыл(id string) error {
-
+func DeleteTask(id string) error {
 	res, err := DB.Exec("DELETE FROM scheduler WHERE id = ?", id)
 	if err != nil {
 		return err
